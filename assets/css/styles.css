@@ -36,14 +36,23 @@ a {
 }
 
 img {
-  display: block;
+  /* display: block; */
 }
 
+/* .header {
+  position: fixed;
+  top: 0;
+} */
+
 .nav {
-  /* position: relative; */
+  position: fixed;
   display: flex;
   justify-content: space-between;
   padding: .75rem 1rem;
+  z-index: 3;
+  width: 100%;
+  height: 4rem;
+  background-color: var(--body-color);
 }
 
 .nav__logo {
@@ -54,7 +63,7 @@ img {
   .nav__menu {
     width: 100%;
     position: absolute;
-    top: -100%;
+    top: -1000%;
     left: 0;
     background-color: var(--body-color);
     display: flex;
@@ -64,6 +73,7 @@ img {
     padding-top: 2.5rem;
     box-shadow: 0 5px 10px hsla(210, 55%, 24%, .1);
     transition: top .4s;
+    z-index: 3;
   }
 }
 
@@ -118,5 +128,59 @@ img {
   top: 0;
 }
 
+.home__container {
+  height: 100vh;
+}
 
+.home__content {
+  padding: 8rem 3rem 0 1rem;
+  position: relative;
+}
 
+.home__subtitle {
+  color: var(--first-color);
+  font-size: .9rem;
+  letter-spacing: .2rem;
+}
+
+.home__title {
+  color: var(--title-color);
+  font-family: var(--second-font);
+  font-size: 2.5rem;
+}
+
+.home__description {
+  color: var(--text-color);
+  font-size: 1rem;
+  margin-top: .4rem;
+}
+
+.home__button {
+  display: inline-block;
+  color: var(--white-color);
+  background: var(--gradient-color);
+  padding: 1rem 2rem;
+  margin-top: 2rem;
+  border-radius: .75rem;
+  box-shadow: 0 15px 25px hsla(210, 54%, 24%, 0.266);
+}
+
+.home__bird-top {
+  position: absolute;
+  rotate: -15deg;
+  top: 12rem;
+  right: 1rem;
+}
+
+.home__bird-bottom {
+  position: absolute;
+  rotate: -30deg;
+  top: 27rem;
+}
+
+.home__images img {
+  position: fixed;
+  bottom: 0;
+  left: -7rem;
+  width: 600px;
+}
