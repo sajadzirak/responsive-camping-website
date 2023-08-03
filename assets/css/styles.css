@@ -35,15 +35,6 @@ a {
   text-decoration: none;
 }
 
-img {
-  /* display: block; */
-}
-
-/* .header {
-  position: fixed;
-  top: 0;
-} */
-
 .nav {
   position: fixed;
   display: flex;
@@ -51,7 +42,7 @@ img {
   padding: .75rem 1rem;
   z-index: 3;
   width: 100%;
-  height: 4rem;
+  height: 5rem;
   background-color: var(--body-color);
 }
 
@@ -128,7 +119,7 @@ img {
   top: 0;
 }
 
-.home__container {
+.home {
   height: 100vh;
 }
 
@@ -169,18 +160,174 @@ img {
   position: absolute;
   rotate: -15deg;
   top: 12rem;
-  right: 1rem;
+  left: 19rem;
 }
 
 .home__bird-bottom {
   position: absolute;
   rotate: -30deg;
   top: 27rem;
+  left: 2rem;
 }
 
 .home__images img {
   position: fixed;
   bottom: 0;
   left: -7rem;
-  width: 600px;
+  /* width: 600px; */
+  width: initial;
+}
+
+@media screen and (max-width: 375px) {
+  .nav {
+    height: 4rem;
+  }
+  
+  .home__content {
+    padding-right: 5rem;
+    padding-top: 4rem;
+  }
+
+  .home__images {
+    width: 100%;
+  }
+
+  .home__bird-top {
+    top: 9.5rem;
+    left: 16rem;
+  }
+
+  .home__bird-bottom {
+    top: 28rem;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  
+  .nav__logo {
+    width: 48px;
+  }
+
+  .nav__close-btn,
+  .nav__toggle {
+    font-size: 1.75rem;
+  }
+
+  .home__subtitle {
+    font-size: 1.1rem;
+  }
+
+  .home__title {
+    font-size: 3rem;
+  }
+
+  .home__description {
+    font-size: 1.2rem;
+  }
+
+  .home__images img {
+    bottom: -2rem;
+  }
+
+  .home__bird-bottom {
+    top: 28rem;
+  }
+
+  .home__bird-top {
+    left: 25rem;
+  }
+}
+
+@media screen and (max-width: 1023px) and (min-height: 1000px) {
+  .home__subtitle {
+    font-size: 1.2rem;
+  }
+
+  .home__title {
+    font-size: 4rem;
+  }
+
+  .home__content {
+    padding-left: 3rem;
+    padding-top: 10rem;
+  }
+
+  .home__bird-bottom {
+    width: 80px;
+    top: 34rem;
+    left: 3rem;
+  }
+
+  .home__bird-top {
+    width: 80px;
+    left: 35rem;
+    top: 18rem;
+  }
+
+  .home__images img {
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  
+  .nav__logo {
+    width: 64px;
+  }
+
+  .nav__toggle, .nav__close-btn {
+    display: none;
+  }
+
+  .nav__menu {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    font-size: 1.2rem;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 5rem;
+  }
+
+  .nav__buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0;
+  }
+
+  .home__content {
+    padding-left: 3rem;
+    padding-top: 7rem;
+  }
+
+  .home__subtitle {
+    font-size: 1.3rem;
+  }
+
+  .home__title {
+    font-size: 4rem;
+  }
+
+  .home__description {
+    font-size: 1.3rem;
+  }
+
+  .home__bird-bottom {
+    width: 90px;
+    top: 30rem;
+  }
+
+  .home__bird-top {
+    width: 90px;
+    left: 35rem;
+  }
+
+  .home__images img {
+    bottom: -3rem;
+  }
 }
